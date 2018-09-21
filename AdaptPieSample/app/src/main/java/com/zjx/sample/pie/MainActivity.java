@@ -32,7 +32,7 @@ public class MainActivity extends AppCompatActivity {
 //        decorView.post(new Runnable() {
 //            @Override
 //            public void run() {
-//            如果想在声明后期中获取刘海数据，必须要在Runnable中操作，否则会有空指针
+//            如果想在生命周期中获取刘海数据，必须要在Runnable中操作，否则会有空指针
 //            }
 //        });
 
