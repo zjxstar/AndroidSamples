@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <TextView
+        android:id="@+id/hello_tv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:padding="10dp"
+        android:text="hello"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/a_btn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="AAA"
+        app:layout_constraintRight_toRightOf="@id/hello_tv" />
+
+    <Button
+        android:id="@+id/b_btn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="BBB"
+        app:layout_constraintHorizontal_bias="0.8"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent" />
+
+    <Button
+        android:id="@+id/c_btn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="CCC"
+        app:layout_constraintCircle="@id/hello_tv"
+        app:layout_constraintCircleAngle="45"
+        app:layout_constraintCircleRadius="80dp" />
+
+    <TextView
+        android:id="@+id/a_tv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="48dp"
+        android:text="AAA"
+        android:visibility="gone"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/hello_tv" />
+
+    <Button
+        android:id="@+id/d_btn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="8dp"
+        android:layout_marginBottom="8dp"
+        android:text="DDD"
+        android:layout_marginLeft="50dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toRightOf="@id/a_tv"
+        app:layout_constraintTop_toBottomOf="@id/hello_tv" />
+
+    <Button
+        android:id="@+id/e_btn"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="60dp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/d_btn"/>
+
+</android.support.constraint.ConstraintLayout>
