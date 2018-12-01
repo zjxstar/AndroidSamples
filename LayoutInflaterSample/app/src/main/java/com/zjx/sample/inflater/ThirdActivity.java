@@ -14,6 +14,6 @@ public class ThirdActivity extends Activity {
         LayoutInflater inflater = LayoutInflater.from(this);
         inflater.setFactory2(new MyFactory(inflater.getFactory()));
 
-        setContentView(R.layout.layout_third);
+        setContentView(R.layout.activity_third);
     }
 }

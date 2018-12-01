@@ -63,6 +63,13 @@ public class MainActivity extends AppCompatActivity {
                 Toast.makeText(MainActivity.this, (String) v.getTag(R.id.tag), Toast.LENGTH_SHORT).show();
             }
         });
+
+        // include里设置的id优先级高
+        View includeView = findViewById(R.id.main_include);
+        includeView.findViewById(R.id.textView2);
+        // layout里面设置的id已经无效
+//        View includeLayoutView = findViewById(R.id.main_include_layout);
+//        includeLayoutView.findViewById(R.id.textView);
     }
 
 

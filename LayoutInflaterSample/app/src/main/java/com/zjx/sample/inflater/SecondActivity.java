@@ -19,7 +19,7 @@ public class SecondActivity extends Activity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
 
-        setContentView(R.layout.layout_second);
+        setContentView(R.layout.activity_second);
         mContainer = findViewById(R.id.container);
         mInflater = LayoutInflater.from(this);
 

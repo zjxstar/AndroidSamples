@@ -30,4 +30,7 @@
         android:text="toThird"
         android:onClick="toThird"/>
 
+    <include android:id="@+id/main_include"
+        layout="@layout/activity_main_include" />
+
 </LinearLayout>
