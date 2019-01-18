@@ -8,24 +8,49 @@
         android:id="@+id/tv_md5_before"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:textSize="15sp"/>
+        android:textSize="15sp"
+        android:gravity="center_horizontal"/>
 
     <TextView
         android:id="@+id/tv_md5_after"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:textSize="15sp"/>
+        android:textSize="15sp"
+        android:layout_marginTop="20dp"/>
 
     <Button
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="MD(Java)"
-        android:textSize="18dp"/>
+        android:text="MD5_Original(Java)"
+        android:textSize="18dp"
+        android:onClick="doMD5Original"/>
 
     <Button
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="MD(Kotlin)"
-        android:textSize="18dp"/>
+        android:text="MD5_String(Java)"
+        android:textSize="18dp"
+        android:onClick="doMD5Str"/>
+
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="MD5_File(Java)"
+        android:textSize="18dp"
+        android:onClick="doMD5File"/>
+
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="MD5_String(Kotlin)"
+        android:textSize="18dp"
+        android:onClick="doMD5KStr"/>
+
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="MD5_File(Kotlin)"
+        android:textSize="18dp"
+        android:onClick="doMD5KFile"/>
 
 </LinearLayout>
