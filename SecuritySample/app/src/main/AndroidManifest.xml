@@ -19,7 +19,9 @@
             </intent-filter>
         </activity>
 
-        <activity android:name=".MD5Activity" />
+        <activity android:name=".md5.MD5Activity" />
+
+        <activity android:name=".base64.Base64Activity" />
     </application>
 
 </manifest>

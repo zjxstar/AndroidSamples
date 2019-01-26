@@ -1,4 +1,4 @@
-package com.zjx.securitysample;
+package com.zjx.securitysample.md5;
 
 import android.os.Bundle;
 import android.support.annotation.Nullable;
@@ -6,6 +6,7 @@ import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 import android.widget.TextView;
 
+import com.zjx.securitysample.R;
 import com.zjx.securitysample.md5.MD5;
 import com.zjx.securitysample.md5.MD5K;
 import com.zjx.securitysample.md5.MD5Utils;
