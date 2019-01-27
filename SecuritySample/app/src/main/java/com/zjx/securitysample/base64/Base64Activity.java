@@ -55,6 +55,9 @@ public class Base64Activity  extends AppCompatActivity {
             Log.d(TAG, "Base64 编码字符串 (MIME) :" + mimeEncodedString);
 
             Log.d(TAG, "使用Android的Base64 NO_WRAP 不会换行: " + Base64.encodeToString(mimeBytes, Base64.NO_WRAP));
+//            String result = java.util.Base64.getEncoder().encodeToString("Ma".getBytes("utf-8"));
+//            byte[] resultb = java.util.Base64.getDecoder().decode(result);
+//            Log.d(TAG, "testByJava: " + new String(resultb));
         }catch(UnsupportedEncodingException e){
             Log.e(TAG, "Error :" + e.getMessage());
         }
