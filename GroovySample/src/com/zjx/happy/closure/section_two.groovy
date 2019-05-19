@@ -2,6 +2,7 @@ package com.zjx.happy.closure
 
 /**
  * 闭包的定义与使用
+ * @author zjxstar
  */
 
 def closure0 = {} // 接收一个参数，空执行语句
@@ -47,6 +48,7 @@ assert code() == 123
 
 /**
  * 参数传递
+ * @author zjxstar
  */
 
 // 一个参数，不声明参数类型
