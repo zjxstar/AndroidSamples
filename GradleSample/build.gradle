@@ -25,3 +25,49 @@ allprojects {
 task clean(type: Delete) {
     delete rootProject.buildDir
 }
+
+/**-----------------Project相关示例------------------*/
+defaultTasks 'clean' // 设置默认Task
+ext { // 设置额外参数
+    hello = 'Welcome to Gradle'
+}
+
+allprojects {
+    repositories {
+        google()
+        jcenter()
+    }
+
+    // 给所有项目都添加一个任务：helloTask
+    task helloTask {
+        doLast { task ->
+            println "I'm ${task.project.name}"
+        }
+    }
+}
+
+subprojects {
+    helloTask { // 给所有子项目中的helloTask任务增加一个doFirst回调
+        doFirst {
+            println "I'm the task in sub project, doFirst"
+        }
+    }
+
+    afterEvaluate { project ->
+        println "it's after evaluate..."
+        helloTask.configure {
+            doLast {
+                println "configure task after evaluate"
+            }
+        }
+    }
+}
+
+// 给所有的子项目（除了app项目）的helloTask配置doLast
+configure(subprojects.findAll{ it.name != 'app' }) {
+    helloTask {
+        doLast {
+            println "i am not app module, i configure doLast"
+        }
+    }
+}

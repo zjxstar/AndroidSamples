@@ -26,3 +26,15 @@ dependencies {
     androidTestImplementation 'com.android.support.test:runner:1.0.2'
     androidTestImplementation 'com.android.support.test.espresso:espresso-core:3.0.2'
 }
+
+/**-----------------Project相关示例------------------*/
+// 访问Project的属性
+println project.group // 打印组名
+println version // 打印版本号，默认 unspecified
+println project.name // 打印项目名
+println rootProject.name // 打印根项目的名字
+logger.quiet('Test project logger property') // 使用logger
+for(String taskName : rootProject.defaultTasks) { // 获取默认任务
+    println "defaultTask: $taskName"
+}
+println rootProject.ext.hello // 打印额外参数
