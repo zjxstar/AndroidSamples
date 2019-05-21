@@ -1,0 +1,28 @@
+plugins {
+    id 'groovy'
+}
+
+apply plugin: 'maven'
+
+dependencies {
+    implementation gradleApi()
+    implementation localGroovy()
+}
+
+repositories {
+    mavenCentral()
+}
+
+// 将该插件上传到本地Maven库
+group='com.happy.plugin'
+version='1.0.0'
+
+// 通过gradlew :customPlugin:uploadArchives命令上传
+uploadArchives {
+    repositories {
+        mavenDeployer {
+            //本地的Maven地址设置为../repos
+            repository(url: uri('../repos'))
+        }
+    }
+}

@@ -74,3 +74,7 @@ customA.message = 'Hi from PluginA'
 /**---------------- 自定义插件：引用在buildSrc模块中定义的插件，使用插件类名的全限定名 ----------------*/
 // 使用gradlew -q CustomPluginTaskB查看插件是否生效
 apply plugin: com.zjx.happy.plugin.CustomPluginB
+
+
+/**---------------- 自定义插件：引用已经发布到Maven的插件 ----------------*/
+apply plugin: 'com.happy.custompluginc'
