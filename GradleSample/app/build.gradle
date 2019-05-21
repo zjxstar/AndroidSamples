@@ -1,3 +1,8 @@
+// 需要放在顶部
+//plugins {
+//    id 'com.happy.custompluginc'
+//}
+
 apply plugin: 'com.android.application'
 
 // 为方便控制台显示内容，可以注释该引用
