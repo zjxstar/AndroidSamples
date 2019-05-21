@@ -30,3 +30,43 @@ dependencies {
     androidTestImplementation 'com.android.support.test.espresso:espresso-core:3.0.2'
 }
 
+/**------------------- 自定义插件：直接在脚本文件中定义，其局限性较大 -------------------*/
+
+// 定义一个Extension类用来接收脚本传的参数
+class CustomExtensionA {
+    String message = 'Hello Custom PluginA'
+
+    // 还可以定义其他配置参数
+    String greeter = 'Welcome Gradle Plugin'
+}
+
+// 定义一个自定义插件类，实现Plugin接口
+class CustomPluginA implements Plugin<Project> {
+
+    @Override
+    void apply(Project target) {
+
+        // 将Extension注册给Plugin
+        def extension = target.extensions.create('customA', CustomExtensionA)
+
+        // 定义一个任务
+        target.task('CustomPluginTaskA') {
+            doFirst {
+                println 'this is custom plugin A task A'
+            }
+
+            doLast {
+                // 使用Extension传入的参数
+                println extension.message
+                println extension.greeter
+            }
+        }
+    }
+}
+
+// 使用插件CustomPluginA，这里必须使用插件类名，而不是字符串
+// 使用gradlew -q CustomPluginTaskA查看插件是否生效
+apply plugin: CustomPluginA
+
+// 配置CustomExtensionA，需要使用注册名，这里是customA
+customA.message = 'Hi from PluginA'
