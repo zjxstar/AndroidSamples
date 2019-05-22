@@ -83,3 +83,6 @@ apply plugin: com.zjx.happy.plugin.CustomPluginB
 
 /**---------------- 自定义插件：引用已经发布到Maven的插件 ----------------*/
 apply plugin: 'com.happy.custompluginc'
+
+/**---------------- 自定义插件：利用Transform向MainActivity中插入代码 ----------------*/
+apply plugin: 'com.happy.customplugin.transform'

@@ -1,0 +1,29 @@
+apply plugin: 'groovy'
+
+apply plugin: 'maven'
+
+dependencies {
+    compile gradleApi()
+    compile localGroovy()
+
+    compile 'com.android.tools.build:gradle:3.3.1'
+    compile group: 'org.javassist', name: 'javassist', version: '3.22.0-GA'
+}
+
+repositories {
+    mavenCentral()
+}
+
+// 将该插件上传到本地Maven库
+group='com.happy.plugin'
+version='1.0.0'
+
+// 通过gradlew :transformPlugin:uploadArchives命令上传
+uploadArchives {
+    repositories {
+        mavenDeployer {
+            //本地的Maven地址设置为../repos
+            repository(url: uri('../repos'))
+        }
+    }
+}
