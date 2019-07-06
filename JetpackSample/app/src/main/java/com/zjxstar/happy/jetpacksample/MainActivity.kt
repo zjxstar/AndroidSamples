@@ -5,10 +5,7 @@ import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.Button
 import android.widget.Toast
-import com.zjxstar.happy.jetpacksample.databinding.DatabindingActivity
-import com.zjxstar.happy.jetpacksample.databinding.PlainOldActivitySolution5
-import com.zjxstar.happy.jetpacksample.databinding.Solution2Activity
-import com.zjxstar.happy.jetpacksample.databinding.SolutionActivity
+import com.zjxstar.happy.jetpacksample.databinding.*
 
 /**
  * 主界面
@@ -27,7 +24,7 @@ class MainActivity : AppCompatActivity() {
         mGoDataBindingBtn = findViewById(R.id.go_databinding_btn)
         mGoDataBindingBtn.apply {
             setOnClickListener { view ->
-                val intent = Intent(context, Solution2Activity::class.java)
+                val intent = Intent(context, TwoWayBindingActivity::class.java)
                 startActivity(intent)
             }
         }

@@ -20,9 +20,11 @@ import android.content.Context
 import android.content.res.ColorStateList
 import android.graphics.drawable.Drawable
 import android.os.Build
+import android.util.Log
 import android.view.View
 import android.widget.ImageView
 import android.widget.ProgressBar
+import android.widget.TextView
 import androidx.core.content.ContextCompat
 import androidx.core.widget.ImageViewCompat
 import androidx.databinding.BindingAdapter
@@ -99,4 +101,15 @@ private fun getDrawablePopularity(popularity: Popularity, context: Context): Dra
             ContextCompat.getDrawable(context, R.drawable.ic_whatshot_black_96dp)
         }
     }
+}
+
+
+@BindingAdapter("android:text")
+fun setText(view: TextView, value: CharSequence) {
+    val oldValue = view.text.toString()
+    if (oldValue == value.toString()) {
+        Log.d("BindingAdapters", "old == new")
+        return
+    }
+    view.text = value
 }
