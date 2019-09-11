@@ -26,6 +26,8 @@
         <activity android:name=".databinding.Solution2Activity"/>
 
         <activity android:name=".lifecycle.NameActivity"/>
+
+        <activity android:name=".room.DBActivity" />
     </application>
 
 </manifest>

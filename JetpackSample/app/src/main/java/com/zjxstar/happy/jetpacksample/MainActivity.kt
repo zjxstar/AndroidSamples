@@ -7,6 +7,7 @@ import android.widget.Button
 import android.widget.Toast
 import com.zjxstar.happy.jetpacksample.databinding.*
 import com.zjxstar.happy.jetpacksample.lifecycle.NameActivity
+import com.zjxstar.happy.jetpacksample.room.DBActivity
 import kotlinx.android.synthetic.main.activity_main.*
 
 /**
@@ -33,6 +34,11 @@ class MainActivity : AppCompatActivity() {
 
         go_lifecycle_btn.setOnClickListener {
             val intent = Intent(this, NameActivity::class.java)
+            startActivity(intent)
+        }
+
+        go_db_btn.setOnClickListener {
+            val intent = Intent(this, DBActivity::class.java)
             startActivity(intent)
         }
     }

@@ -25,4 +25,13 @@
         app:layout_constraintRight_toRightOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/go_databinding_btn" />
 
+    <Button
+        android:id="@+id/go_db_btn"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="DB"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/go_lifecycle_btn" />
+
 </androidx.constraintlayout.widget.ConstraintLayout>
