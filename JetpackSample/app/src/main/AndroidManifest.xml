@@ -28,6 +28,8 @@
         <activity android:name=".lifecycle.NameActivity"/>
 
         <activity android:name=".room.DBActivity" />
+
+        <activity android:name=".room.RoomActivity" />
     </application>
 
 </manifest>
